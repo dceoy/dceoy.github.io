@@ -2,17 +2,61 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title></title>
-        <style>canvas { width: 100%; height: 100% }</style>
+        <title>d4i.github.io</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="all" />
+        <style>
+            @import url('//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700');
+            body {
+                font-family: "Open Sans", Calibri, Candara, Arial, sans-serif;
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+            canvas { width: 100%; height: 100% }
+            b.arrow {
+                display: inline-block;
+                width: 0;
+                height: 0;
+                vertical-align: middle;
+                border: 4px solid transparent;
+                border-left-color: #000000;
+                content: "";
+                margin: 0 0.5em 0 0.5em;
+            }
+            a {
+                color: #000000;
+                text-decoration: none;
+            }
+        </style>
     </head>
     <body>
-        <h2>d4i.github.io</h2>
-        <ul>
-            <li><a href="https://github.com/">Github</a></li>
-            <li><a href="https://twitter.com/dceoy">Twitter</a></li>
-            <li><a href="http://d4i.hateblo.jp/">Hatena Blog</a></li>
-        </ul>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1">
+                    <h1>d4i.github.io</h1>
+                    <br />
+                    <p>a Software Developer in Japan</p>
+                    <p>Web Engineering &amp; Medical Informatics</p>
+                    <br />
+                    <p><b class="arrow"></b><a href="https://github.com/">Github</a></p>
+                    <p><b class="arrow"></b><a href="https://twitter.com/dceoy">Twitter</a></p>
+                    <p><b class="arrow"></b><a href="http://d4i.hateblo.jp/">Hatena Blog</a></p>
+                </div>
+            </div>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/jquery-2.0.2.min.js"><\/script>')</script>
+
+        <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+        <script>window.d3 || document.write('<script src="js/d3.v3.min.js"><\/script>')</script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+        <script>window.angular || document.write('<script src="js/angular.min.js"><\/script>')</script>
+
         <script src="https://rawgithub.com/mrdoob/three.js/master/build/three.min.js"></script>
         <script>window.THREE || document.write('<script src="three.min.js"><\/script>')</script>
+
+        <script src="js/bootstrap.min.js"></script>
     </body>
 </html>
