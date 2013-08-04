@@ -6,56 +6,108 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="all" />
         <style>
-            @import url('//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700');
+            @import url('//fonts.googleapis.com/css?family=Droid+Sans:400,700');
+            html, body { height: 100% }
             body {
-                font-family: "Open Sans", Calibri, Candara, Arial, sans-serif;
-                padding-top: 30px;
-                padding-bottom: 30px;
+                font-family: "Droid Sans", sans-serif;
+                color: #bbbbbb;
+                background: #150a46; /* Old browsers */
+                background: -moz-linear-gradient(top,  #150a46 0%, #030609 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#150a46), color-stop(100%,#030609)); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(top,  #150a46 0%,#030609 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(top,  #150a46 0%,#030609 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(top,  #150a46 0%,#030609 100%); /* IE10+ */
+                background: linear-gradient(to bottom,  #150a46 0%,#030609 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#150a46', endColorstr='#030609',GradientType=0 ); /* IE6-9 */
             }
-            canvas { width: 100%; height: 100% }
+            canvas {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                z-index: 0;
+            }
+            .container {
+                z-index: 1;
+            }
+            .page-header {
+                margin-top: 3em;
+                border-bottom: none;
+                color: #ffffff;
+            }
+            #aboutme {  padding: 1em 0; }
+            #aboutme p {  padding-left: 1em; }
             b.arrow {
                 display: inline-block;
                 width: 0;
                 height: 0;
                 vertical-align: middle;
-                border: 4px solid transparent;
-                border-left-color: #000000;
+                border: 0.3em solid transparent;
+                border-left-color: #cccccc;
                 content: "";
-                margin: 0 0.5em 0 0.5em;
+                margin: 0 0.5em;
             }
-            a {
-                color: #000000;
-                text-decoration: none;
+            #links { margin-bottom: 3em; }
+            a { color: #cccccc; }
+            a[href]:hover { color: #ffffff; }
+            footer {
+                margin: 3em 0;
+                text-align: center;
             }
         </style>
     </head>
     <body>
+        <canvas id="fig">
+            <p>Your browser does not support the HTML5 Canvas element.</p>
+            <p>Please update your browser.</p>
+            <br />
+        </canvas>
+
         <div class="container">
             <div class="row">
-                <div class="col-lg-5 col-lg-offset-1">
-                    <h1>d4i.github.io</h1>
-                    <br />
-                    <p>a Software Developer in Japan</p>
-                    <p>Web Engineering &amp; Medical Informatics</p>
-                    <br />
-                    <p><b class="arrow"></b><a href="https://github.com/">Github</a></p>
-                    <p><b class="arrow"></b><a href="https://twitter.com/dceoy">Twitter</a></p>
-                    <p><b class="arrow"></b><a href="http://d4i.hateblo.jp/">Hatena Blog</a></p>
+                <div class="col-lg-10 col-lg-offset-1">
+                    <div class="page-header">
+                        <h1>d4i.github.io</h1>
+                    </div>
+                    <div id="aboutme">
+                        <h5>about me &raquo;</h5>
+                        <p>a Software Developer in Japan</p>
+                        <p>Web Engineering &amp; Medical Informatics</p>
+                    </div>
+                    <div id="links">
+                        <p><b class="arrow"></b><a href="https://github.com/">Github</a></p>
+                        <p><b class="arrow"></b><a href="https://gist.github.com/d4i">Gist</a></p>
+                        <p><b class="arrow"></b><a href="https://twitter.com/dceoy">Twitter</a></p>
+                        <p><b class="arrow"></b><a href="http://d4i.hateblo.jp/">Hatena Blog</a></p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/jquery-2.0.2.min.js"><\/script>')</script>
+            <footer>
+                <p>Copyright (c) - d4i - 2013</p>
+            </footer>
+        </div> <!-- /container -->
+
+        <script>
+            window.onload = function() {
+                draw();
+            }
+
+            function draw() {
+                var canvas = document.getElementById('fig');
+                if (!canvas || !canvas.getContext) return false;
+                var ctx = canvas.getContext('2d');
+
+                ctx.strokeRect(200,10,50,50);
+
+            }
+        </script>
 
         <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
         <script>window.d3 || document.write('<script src="js/d3.v3.min.js"><\/script>')</script>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-        <script>window.angular || document.write('<script src="js/angular.min.js"><\/script>')</script>
-
-        <script src="https://rawgithub.com/mrdoob/three.js/master/build/three.min.js"></script>
-        <script>window.THREE || document.write('<script src="three.min.js"><\/script>')</script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/jquery-2.0.2.min.js"><\/script>')</script>
 
         <script src="js/bootstrap.min.js"></script>
     </body>
