@@ -7,61 +7,81 @@
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="all" />
         <style>
             @import url('//fonts.googleapis.com/css?family=Droid+Sans:400,700');
-            html, body { height: 100% }
             body {
                 font-family: "Droid Sans", sans-serif;
                 color: #bbbbbb;
-                background: #150a46; /* Old browsers */
-                background: -moz-linear-gradient(top,  #150a46 0%, #030609 100%); /* FF3.6+ */
-                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#150a46), color-stop(100%,#030609)); /* Chrome,Safari4+ */
-                background: -webkit-linear-gradient(top,  #150a46 0%,#030609 100%); /* Chrome10+,Safari5.1+ */
-                background: -o-linear-gradient(top,  #150a46 0%,#030609 100%); /* Opera 11.10+ */
-                background: -ms-linear-gradient(top,  #150a46 0%,#030609 100%); /* IE10+ */
-                background: linear-gradient(to bottom,  #150a46 0%,#030609 100%); /* W3C */
-                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#150a46', endColorstr='#030609',GradientType=0 ); /* IE6-9 */
+                background: #030609; /* Old browsers */
+                background: -moz-linear-gradient(left,  #030609 0%, #151045 50%, #030609 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, right top, color-stop(0%,#030609), color-stop(50%,#151045), color-stop(100%,#030609)); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(left,  #030609 0%,#151045 50%,#030609 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(left,  #030609 0%,#151045 50%,#030609 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(left,  #030609 0%,#151045 50%,#030609 100%); /* IE10+ */
+                background: linear-gradient(to right,  #030609 0%,#151045 50%,#030609 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#030609', endColorstr='#030609',GradientType=1 ); /* IE6-9 */
             }
-            canvas {
+            svg#sinus {
                 position: absolute;
                 width: 100%;
                 height: 100%;
-                text-align: center;
                 z-index: 0;
             }
             .container {
                 z-index: 1;
             }
             .page-header {
-                margin-top: 3em;
+                margin: 6em 0 3em 0;
                 border-bottom: none;
                 color: #ffffff;
             }
-            #aboutme {  padding: 1em 0; }
-            #aboutme p {  padding-left: 1em; }
+            #aboutme { padding: 1em 0 2em 0; }
+            #aboutme p { padding-left: 1em; }
             b.arrow {
                 display: inline-block;
                 width: 0;
                 height: 0;
                 vertical-align: middle;
                 border: 0.3em solid transparent;
-                border-left-color: #cccccc;
+                border-left-color: #bbbbbb;
                 content: "";
-                margin: 0 0.5em;
+                margin: 0 1em 0 0.5em;
             }
-            #links { margin-bottom: 3em; }
-            a { color: #cccccc; }
+            #links { padding: 2em 0 4em 0; }
+            a { color: #bbbbbb; }
             a[href]:hover { color: #ffffff; }
             footer {
-                margin: 3em 0;
-                text-align: center;
+                margin: 4em 0 2em 0;
             }
         </style>
     </head>
     <body>
-        <canvas id="fig">
-            <p>Your browser does not support the HTML5 Canvas element.</p>
-            <p>Please update your browser.</p>
-            <br />
-        </canvas>
+        <svg id="sinus" viewBox="0 0 200 200">
+            <def>
+                <style type="text/css">
+                    line {
+                        stroke: #a0efda;
+                        stroke-width: 0.3;
+                        stroke-linecap: round;
+                    }
+                </style>
+            </def>
+
+            <!-- P -->
+            <line x1="140" y1="0" x2="140" y2="60"/>
+            <line x1="140" y1="60" x2="145" y2="65"/>
+            <line x1="145" y1="65" x2="140" y2="70"/>
+            <line x1="140" y1="70" x2="140" y2="80"/>
+            <!-- QRS -->
+            <line x1="140" y1="80" x2="135" y2="85"/>
+            <line x1="135" y1="85" x2="190" y2="90"/>
+            <line x1="190" y1="90" x2="130" y2="95"/>
+            <line x1="130" y1="95" x2="140" y2="100"/>
+            <!-- T -->
+            <line x1="140" y1="100" x2="140" y2="110"/>
+            <line x1="140" y1="110" x2="150" y2="115"/>
+            <line x1="150" y1="115" x2="140" y2="120"/>
+            <line x1="140" y1="120" x2="140" y2="200"/>
+
+        </svg>
 
         <div class="container">
             <div class="row">
@@ -75,36 +95,18 @@
                         <p>Web Engineering &amp; Medical Informatics</p>
                     </div>
                     <div id="links">
-                        <p><b class="arrow"></b><a href="https://github.com/">Github</a></p>
-                        <p><b class="arrow"></b><a href="https://gist.github.com/d4i">Gist</a></p>
-                        <p><b class="arrow"></b><a href="https://twitter.com/dceoy">Twitter</a></p>
-                        <p><b class="arrow"></b><a href="http://d4i.hateblo.jp/">Hatena Blog</a></p>
+                        <p><a href="https://github.com/"><b class="arrow"></b>Github</a></p>
+                        <p><a href="https://gist.github.com/d4i"><b class="arrow"></b>Gist</a></p>
+                        <p><a href="https://twitter.com/dceoy"><b class="arrow"></b>Twitter</a></p>
+                        <p><a href="http://d4i.hateblo.jp/"><b class="arrow"></b>Hatena Blog</a></p>
                     </div>
+
+                    <footer>
+                        <p>Copyright (c) - d4i - 2013</p>
+                    </footer>
                 </div>
             </div>
-
-            <footer>
-                <p>Copyright (c) - d4i - 2013</p>
-            </footer>
         </div> <!-- /container -->
-
-        <script>
-            window.onload = function() {
-                draw();
-            }
-
-            function draw() {
-                var canvas = document.getElementById('fig');
-                if (!canvas || !canvas.getContext) return false;
-                var ctx = canvas.getContext('2d');
-
-                ctx.strokeRect(200,10,50,50);
-
-            }
-        </script>
-
-        <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-        <script>window.d3 || document.write('<script src="js/d3.v3.min.js"><\/script>')</script>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/jquery-2.0.2.min.js"><\/script>')</script>
