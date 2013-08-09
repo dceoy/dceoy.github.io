@@ -110,8 +110,8 @@
             var container = document.getElementById('container');
             var renderer = new FSS.SVGRenderer();
             var scene = new FSS.Scene();
-            var light = new FSS.Light('#030609', '#5533cc');
-            var geometry = new FSS.Plane(2880, 1800, 72, 9);
+            var light = new FSS.Light('#040832', '#bb33dd');
+            var geometry = new FSS.Plane(3000, 2000, 15, 10);
             var material = new FSS.Material('#ffffff', '#ffffff');
             var mesh = new FSS.Mesh(geometry, material);
             var now, start = Date.now();
@@ -129,7 +129,7 @@
 
             function animate() {
                 now = Date.now() - start;
-                light.setPosition(300*Math.sin(now*0.001), 200*Math.cos(now*0.001), 60);
+                light.setPosition(300*Math.sin(now*0.001), 200*Math.cos(now*0.0005), 60);
                 renderer.render(scene);
                 requestAnimationFrame(animate);
             }
