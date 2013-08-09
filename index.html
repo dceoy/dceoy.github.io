@@ -10,6 +10,7 @@
         <style>
             @import url(http://fonts.googleapis.com/css?family=Ubuntu);
             body {
+                margin: 0;
                 font-family: "Ubuntu",Tahoma,"Helvetica Neue",Helvetica,Arial,sans-serif;
                 color: #dddddd;
                 background: #030609;
@@ -29,9 +30,6 @@
             header {
                 padding: 2em 0;
             }
-            footer {
-                padding: 5em 0 1em 0;
-            }
             header>h1 {
                 line-height: 3;
                 font-weight: 500;
@@ -44,6 +42,16 @@
                 padding: 1em 0;
                 line-height: 1.8;
             }
+            b.triangle {
+                display: inline-block;
+                width: 0;
+                height: 0;
+                vertical-align: bottom;
+                border: 0.4em solid transparent;
+                border-top-color: #dddddd;
+                content: "";
+                margin: 0 1em 0 0;
+            }
             a[href] {
                 color: #dddddd;
                 text-decoration: none;
@@ -53,6 +61,7 @@
                 text-decoration: underline;
             }
             footer {
+                padding: 5em 0 1em 0;
                 font-size: 0.7em;
             }
             @media only screen and (max-width: 767px) {
@@ -83,7 +92,7 @@
                 </header>
 
                 <div id="aboutme">
-                    <h5>about me &raquo;</h5>
+                    <h5><b class="triangle"></b>about me</h5>
                     <p>a Software Developer in Japan</p>
                     <p>Web &amp; Medical Information</p>
                 </div>
@@ -129,7 +138,7 @@
 
             function animate() {
                 now = Date.now() - start;
-                light.setPosition(300*Math.sin(now*0.001), 200*Math.cos(now*0.0005), 60);
+                light.setPosition(300*Math.sin(now*0.0002), 200*Math.cos(now*0.0001), 60);
                 renderer.render(scene);
                 requestAnimationFrame(animate);
             }
