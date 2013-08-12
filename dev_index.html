@@ -29,19 +29,24 @@
                 text-align: center;
             }
             header {
-                padding: 2em 0;
+                padding: 4em 0 5em 0;
             }
             header>h1 {
-                line-height: 3;
+                line-height: 1.2;
                 font-weight: 500;
+                font-size: 2.5em;
                 color: #ffffff;
             }
+            p.lead, #aboutme {
+                font-weight: 200;
+            }
             #aboutme {
-                padding: 1em 0;
+                padding: 1em 0 0.5em 0;
             }
             #links {
-                padding: 1em 0;
-                line-height: 1.8;
+                padding: 0.5em 0 1em 0;
+                line-height: 1.6;
+                font-size: 1.2em;
             }
             b.triangle {
                 display: inline-block;
@@ -62,24 +67,34 @@
                 text-decoration: underline;
             }
             footer {
-                padding: 5em 0 1em 0;
-                font-size: 0.7em;
+                padding: 9em 0 1em 0;
+                font-size: 0.8em;
             }
             @media only screen and (max-width: 767px) {
                 .row {
                     padding: 0;
                 }
+                header {
+                    padding: 1em 0;
+                }
                 header>h1 {
-                    line-height: 1.8;
+                    font-size: 1.6em;
+                    line-height: 1.1
                 }
-                header, #links, #aboutme {
-                    padding: 0.1em 0;
+                p.lead, #aboutme {
+                    font-size: 0.8em;
                 }
-                #links, #aboutme {
+                #aboutme {
+                    padding: 0.6em 0 0.1em 0;
+                }
+                #links {
+                    padding: 0.1em 0 0.6em 0;
                     line-height: 1;
+                    font-size: 1;
                 }
                 footer {
-                    padding: 1.6em 0 0.2em 0;
+                    padding: 1.2em 0 0.8em 0;
+                    font-size: 0.6em;
                 }
         </style>
 
@@ -90,12 +105,12 @@
             <div class="row">
                 <header>
                     <h1>d4i.github.io</h1>
+                    <p class="lead">Web Engineering &amp; Medical Informatics</p>
                 </header>
 
                 <div id="aboutme">
                     <h5><b class="triangle"></b>about me</h5>
                     <p>a Software Developer in Japan</p>
-                    <p>Web &amp; Medical Information</p>
                 </div>
 
                 <div id="links">
