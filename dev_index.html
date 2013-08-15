@@ -96,6 +96,7 @@
                     padding: 1.2em 0 0.8em 0;
                     font-size: 0.6em;
                 }
+            }
         </style>
 
     </head>
@@ -125,7 +126,7 @@
                     <p>Background built with <a href="https://github.com/wagerfield/flat-surface-shader">FSS</a>. Web font from <a href="http://www.google.com/fonts/">Google</a>.</p>
                 </footer>
             </div>
-        </div> <!-- /container -->
+        </div>
 
         <script src="https://rawgithub.com/wagerfield/flat-surface-shader/master/deploy/fss.min.js"></script>
         <script>window.FSS || document.write('<script src="js/fss.min.js"><\/script>')</script>
@@ -149,7 +150,7 @@
             }
 
             function resize() {
-                renderer.setSize(container.offsetWidth, container.offsetHeight);
+                renderer.setSize(container.offsetWidth, container.scrollHeight);
             }
 
             function animate() {
