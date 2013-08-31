@@ -10,6 +10,7 @@
 
         <script>
             var filename = 'example.csv';
+
             d3.csv(filename, function(data){
                 data = data.splice(0, 100);
 
@@ -22,7 +23,6 @@
                 d3.layout.cloud().size([width, height])
                     .words(wordcount)
                     .padding(5)
-                    .rotate(function() { return 0; })
                     .rotate(function() { return ~~(Math.random() * 2) * 90; })
                     .font("Impact")
                     .fontSize(function(d) { return d.size; })
