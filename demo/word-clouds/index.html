@@ -15,10 +15,10 @@
       d3.csv(filename, function(data){
         data = data.splice(0, 100);
 
-        var width = document.width - 20,
-        height = document.height - 20,
+        var width = window.innerWidth - 20,
+        height = window.innerHeight - 20,
         fill = d3.scale.category20(),
-        maxcount = d3.max(data, function(d){ return d.count} ),
+        maxcount = d3.max(data, function(d){ return d.count; } ),
         wordcount = data.map(function(d) { return {text: d.word, size: d.count / maxcount * 10}; });
 
         d3.layout.cloud().size([width, height])
@@ -53,7 +53,7 @@
           })
           .text(function(d) { return d.text; });
         }
-      })
+      });
     </script>
   </body>
 </html>
