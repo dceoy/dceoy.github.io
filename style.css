@@ -1,0 +1,107 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+
+body {
+  margin: 0;
+  font-family: "Ubuntu",Tahoma,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #CCCCCC;
+  background: #030609;
+}
+
+.container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.row {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  padding: 2em 0;
+  text-align: center;
+}
+
+header {
+  padding: 4em 0 5em 0;
+}
+
+header>h1 {
+  line-height: 1.2;
+  font-weight: 500;
+  font-size: 2.5em;
+  color: #FFFFFF;
+}
+
+p.lead, #aboutme {
+  font-weight: 200;
+}
+
+#aboutme {
+  padding: 1em 0 0.5em 0;
+}
+
+#links {
+  padding: 0.5em 0 1em 0;
+  line-height: 1.6;
+  font-size: 1.2em;
+}
+
+b.triangle {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: bottom;
+  border: 0.4em solid transparent;
+  border-top-color: #CCCCCC;
+  content: "";
+  margin: 0 1em 0 0;
+}
+
+a[href] {
+  color: #DDFFBB;
+  text-decoration: none;
+}
+
+a[href]:hover {
+  color: #BBFFDD;
+  text-decoration: underline;
+}
+
+footer {
+  padding: 8em 0 1em 0;
+  font-size: 0.8em;
+}
+
+@media only screen and (max-width: 767px) {
+  .row {
+    padding: 0;
+  }
+
+  header {
+    padding: 1em 0;
+  }
+
+  header>h1 {
+    font-size: 1.6em;
+    line-height: 1.1
+  }
+
+  p.lead, #aboutme {
+    font-size: 0.8em;
+  }
+
+  #aboutme {
+    padding: 0.6em 0 0.1em 0;
+  }
+
+  #links {
+    padding: 0.1em 0 0.6em 0;
+    line-height: 1;
+    font-size: 1;
+  }
+
+  footer {
+    padding: 1.2em 0 0.8em 0;
+    font-size: 0.6em;
+  }
+}
