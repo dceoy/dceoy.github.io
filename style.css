@@ -22,7 +22,7 @@ body {
 }
 
 header {
-  padding: 4em 0 5em 0;
+  padding: 1em 0 3em 0;
 }
 
 header>h1 {
@@ -41,9 +41,13 @@ p.lead, #aboutme {
 }
 
 #links {
-  padding: 0.5em 0 1em 0;
+  padding: 0.5em 0 0.5em 0;
   line-height: 1.6;
   font-size: 1.2em;
+}
+
+#wishlist {
+  padding: 0.5em 0 1em 0;
 }
 
 b.triangle {
@@ -57,51 +61,34 @@ b.triangle {
   margin: 0 1em 0 0;
 }
 
+b.bulkhead {
+  margin: 0 2em 0 2em;
+}
+
+b.leftspace {
+  margin: 0 1em 0 0;
+}
+
 a[href] {
-  color: #DDFFBB;
+  color: #BBFFEE;
   text-decoration: none;
 }
 
 a[href]:hover {
-  color: #BBFFDD;
+  color: #DDFFCC;
   text-decoration: underline;
 }
 
 footer {
-  padding: 8em 0 1em 0;
+  padding: 4em 0 1em 0;
+}
+
+footer>p {
   font-size: 0.8em;
 }
 
 @media only screen and (max-width: 767px) {
   .row {
     padding: 0;
-  }
-
-  header {
-    padding: 1em 0;
-  }
-
-  header>h1 {
-    font-size: 1.6em;
-    line-height: 1.1
-  }
-
-  p.lead, #aboutme {
-    font-size: 0.8em;
-  }
-
-  #aboutme {
-    padding: 0.6em 0 0.1em 0;
-  }
-
-  #links {
-    padding: 0.1em 0 0.6em 0;
-    line-height: 1;
-    font-size: 1;
-  }
-
-  footer {
-    padding: 1.2em 0 0.8em 0;
-    font-size: 0.6em;
   }
 }
