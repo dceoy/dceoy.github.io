@@ -37,17 +37,16 @@ p.lead, #aboutme {
 }
 
 #aboutme {
-  padding: 1em 0 0.5em 0;
+  padding: 1em 0 1em 0;
 }
 
 #links {
-  padding: 0.5em 0 0.5em 0;
+  padding: 1em 0 1em 0;
   line-height: 1.6;
-  font-size: 1.2em;
 }
 
 #amazon {
-  padding: 0.5em 0 1em 0;
+  padding: 1em 0 1em 0;
 }
 
 b.triangle {
@@ -62,7 +61,7 @@ b.triangle {
 }
 
 b.bulkhead {
-  margin: 0 2em 0 2em;
+  margin: 0 1em 0 1em;
 }
 
 b.leftspace {
