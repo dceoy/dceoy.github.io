@@ -33,10 +33,6 @@ a[href]:hover {
   text-decoration: underline;
 }
 
-ul.nobullet {
-  list-style: none;
-}
-
 ul.circlebullet {
   list-style: circle;
 }
