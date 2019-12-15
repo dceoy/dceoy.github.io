@@ -37,6 +37,10 @@ ul.circlebullet {
   list-style: circle;
 }
 
+ul.squarebullet {
+  list-style: square;
+}
+
 code {
   color: #FFFFFF;
 }
