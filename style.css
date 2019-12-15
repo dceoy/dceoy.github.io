@@ -1,4 +1,13 @@
-@import url(//fonts.googleapis.com/css?family=Ubuntu);
+@import url("//fonts.googleapis.com/css?family=Ubuntu");
+@import url("dead-simple-grid/css/grid.css");
+@import url("dead-simple-grid/css/screen.css");
+
+/*!
+ * The code for animation is a fork of the following CSS code:
+ *
+ * Pure CSS Gradient Background Animation by Manuel Pinto
+ * https://codepen.io/P1N2O/pen/pyBNzX
+ */
 
 body {
   width: 100%;
