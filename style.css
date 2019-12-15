@@ -1,17 +1,16 @@
-@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+@import url(//fonts.googleapis.com/css?family=Ubuntu);
 
 body {
-  margin: 0;
   width: 100%;
   height: 100vh;
   font-family: "Ubuntu",Tahoma,"Helvetica Neue",Helvetica,Arial,sans-serif;
   color: #FFFFFF;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
+  animation: gradient_background 30s ease infinite;
 }
 
-@keyframes gradientBG {
+@keyframes gradient_background {
   0% {
     background-position: 0% 50%;
   }
@@ -23,71 +22,10 @@ body {
   }
 }
 
-.container {
-  position: absolute;
-  top: 15%;
-  width: 100%;
-  height: 100%;
-}
+.container { max-width: 90em; }
 
-.row {
-  position: absolute;
-  width: 100%;
-  z-index: 1;
-  text-align: center;
-}
-
-header {
-  padding: 1em 0 3em 0;
-}
-
-header>h1 {
-  line-height: 1.2;
-  font-weight: 500;
-  font-size: 2.5em;
-}
-
-p.lead, #aboutme {
-  font-weight: 200;
-}
-
-#aboutme {
-  padding: 1em 0 1em 0;
-}
-
-#links {
-  padding: 1em 0 1em 0;
-  line-height: 1.6;
-}
-
-#amazon {
-  padding: 1em 0 1em 0;
-}
-
-b.triangle {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  vertical-align: bottom;
-  border: 0.4em solid transparent;
-  border-top-color: #FFFFFF;
-  content: "";
-  margin: 0 1em 0 0;
-}
-
-b.bulkhead {
-  margin: 0 1em 0 1em;
-}
-
-b.leftspace {
-  margin: 0 1em 0 0;
-}
-
-a[href], a[href]:hover {
-  color: #F6FFD4;
-}
-
-a[href] {
+a {
+  color: #E8FF96;
   text-decoration: none;
 }
 
@@ -95,16 +33,34 @@ a[href]:hover {
   text-decoration: underline;
 }
 
-footer {
-  padding: 4em 0 1em 0;
+ul.nobullet {
+  list-style: none;
 }
 
-footer>p {
-  font-size: 0.8em;
+ul.circlebullet {
+  list-style: circle;
 }
 
-@media only screen and (max-width: 767px) {
-  .row {
-    padding: 0;
-  }
+code {
+  color: #FFFFFF;
+}
+
+.desc {
+  color: #FFFFFF;
+}
+
+@media only screen and (min-width: 34em) {
+  .feature, .info { width: 50%; }
+}
+
+@media only screen and (min-width: 54em) {
+  .content { width: 66.66%; }
+  .sidebar { width: 33.33%; }
+  .info    { width: 100%;   }
+}
+
+@media only screen and (min-width: 76em) {
+  .content { width: 58.33%; }
+  .sidebar { width: 41.66%; }
+  .info    { width: 50%;    }
 }

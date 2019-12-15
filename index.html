@@ -3,50 +3,73 @@
   <head>
     <meta charset="UTF-8">
     <title>dceoy.github.io</title>
+    <meta name="description" content="">
     <meta name="author" content="Daichi Narushima"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="google-site-verification" content="WuVj8CbRzEPvwRKoiZk55j21eOv_vB6A0YpVk2whiWU" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="dead-simple-grid/css/grid.css">
+    <link rel="stylesheet" href="dead-simple-grid/css/screen.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <meta name="google-site-verification" content="WuVj8CbRzEPvwRKoiZk55j21eOv_vB6A0YpVk2whiWU" />
   </head>
   <body>
-    <div class="container" id="container">
+    <div class="container">
+      <div class="row col">
+        <h1>dceoy.github.io</h1>
+        <p class="intro">Web Page of Daichi Narushima, Ph.D.</p>
+      </div>
+
       <div class="row">
-        <header>
-          <h1>dceoy.github.io</h1>
-        </header>
+        <div class="col content">
+          <div class="row">
+            <div class="col feature">
+              <h3>About me</h3>
+              <ul class="nobullet">
+                <li>Narushima, Daichi (成島 大智)</li>
+              </ul>
 
-        <div id="aboutme">
-          <h5><b class="triangle">&nbsp;</b>about me</h5>
-          <p>software engineer and medical data scientist</p>
-          <p>based in Tokyo, Japan</p>
+              <ul class="circlebullet">
+                <li>software developer</li>
+                <li>medical data scientist</li>
+                <li>based in Tokyo</li>
+                <li>Ph.D. in pharmaceutical sciences</li>
+              </ul>
+            </div>
+
+            <div class="col feature">
+              <h3>Links</h3>
+              <ul class="circlebullet">
+                <li><a href="//github.com/dceoy">GitHub</a></li>
+                <li><a href="//gist.github.com/dceoy">Gist</a></li>
+                <li><a href="//twitter.com/dceoy">Twitter</a></li>
+                <li><a href="//dceoy.github.io/blog">Blog (japanese)</a></li>
+                <li><a href="//www.amazon.co.jp/registry/wishlist/19AO83BWSSZYG/ref=cm_sw_r_fa_ws_yCBAwbYSCBQHX">Amazon Wish List</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
 
-        <div id="links">
+        <div class="col sidebar">
+          <p>Copyright (c) 2013-2019 - <a href="//github.com/dceoy">Daichi Narushima</a></p>
+
           <p>
-            <a href="https://github.com/dceoy">github</a>
-            <b class="bulkhead">|</b>
-            <a href="https://gist.github.com/dceoy">gist</a>
-            <b class="bulkhead">|</b>
-            <a href="https://twitter.com/dceoy">twitter</a>
-            <b class="bulkhead">|</b>
-            <a href="https://dceoy.github.io/blog">blog (ja)</a>
+            <script charset="utf-8" type="text/javascript">
+              amzn_assoc_ad_type = "responsive_search_widget";
+              amzn_assoc_tracking_id = "dceoy-22";
+              amzn_assoc_marketplace = "amazon";
+              amzn_assoc_region = "JP";
+              amzn_assoc_placement = "";
+              amzn_assoc_search_type = "search_widget";
+              amzn_assoc_width = "auto";
+              amzn_assoc_height = "auto";
+              amzn_assoc_default_search_category = "";
+              amzn_assoc_default_search_key = "amazon";
+              amzn_assoc_theme = "light";
+              amzn_assoc_bg_color = "DDEEFF";
+            </script>
+            <script src="//z-fe.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1&MarketPlace=JP"></script>
           </p>
         </div>
-
-        <div id="amazon">
-          <p>
-            <b class="leftspace">&raquo;</b>
-            <a href="https://www.amazon.co.jp/registry/wishlist/19AO83BWSSZYG/ref=cm_sw_r_fa_ws_yCBAwbYSCBQHX">amazon wish list</a>
-          </p>
-          <p>
-            <b class="leftspace">&raquo;</b>
-            <a href="/amazon.html">amazon search</a>
-          </p>
-        </div>
-
-        <footer>
-          <p>Copyright (c) 2013-2019 - <a href="https://github.com/dceoy">Daichi Narushima</a></p>
-        </footer>
       </div>
     </div>
 
