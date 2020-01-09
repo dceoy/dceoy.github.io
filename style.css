@@ -42,6 +42,10 @@ a[href]:hover {
   text-decoration: underline;
 }
 
+.indented {
+  padding-left: 2em;
+}
+
 ul.circlebullet {
   list-style: circle;
 }
