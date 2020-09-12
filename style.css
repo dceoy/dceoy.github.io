@@ -31,7 +31,9 @@ body {
   }
 }
 
-.container { max-width: 90em; }
+.container {
+  max-width: 90em;
+}
 
 a {
   color: #E8FF96;
@@ -46,6 +48,11 @@ a[href]:hover {
   padding-left: 2em;
 }
 
+.ad-unit {
+  text-align: center;
+  color: #AAAAAA;
+}
+
 ul.circlebullet {
   list-style: circle;
 }
@@ -55,10 +62,6 @@ ul.squarebullet {
 }
 
 code {
-  color: #FFFFFF;
-}
-
-.desc {
   color: #FFFFFF;
 }
 
