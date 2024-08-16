@@ -1,4 +1,5 @@
 dceoy.github.io
 ===============
 
-[My Github Page](https://dceoy.github.io/)
+- [Github Pages](https://dceoy.github.io/)
+- [Cloudflare Pages](https://dceoy.pages.dev/)
