@@ -1,0 +1,14 @@
+---
+name: CI/CD
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  html-lint-and-scan:
+    permissions:
+      contents: read
+    uses: dceoy/gh-actions-for-devops/.github/workflows/html-lint-and-scan.yml@main
