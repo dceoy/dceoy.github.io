@@ -12,20 +12,22 @@
 body {
   width: 100%;
   height: 100vh;
-  font-family: "Ubuntu", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #ffffff;
+  font-family: Ubuntu, Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #fff;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
-  animation: gradient_background 30s ease infinite;
+  animation: gradient-background 30s ease infinite;
 }
 
-@keyframes gradient_background {
+@keyframes gradient-background {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -50,7 +52,7 @@ a[href]:hover {
 
 .ad-unit {
   text-align: center;
-  color: #bbbbbb;
+  color: #bbb;
 }
 
 ul.circlebullet {
@@ -62,35 +64,39 @@ ul.squarebullet {
 }
 
 code {
-  color: #ffffff;
+  color: #fff;
 }
 
-@media only screen and (min-width: 34em) {
+@media only screen and (width >= 34em) {
   .feature,
   .info {
     width: 50%;
   }
 }
 
-@media only screen and (min-width: 54em) {
+@media only screen and (width >= 54em) {
   .content {
     width: 66.66%;
   }
+
   .sidebar {
     width: 33.33%;
   }
+
   .info {
     width: 100%;
   }
 }
 
-@media only screen and (min-width: 76em) {
+@media only screen and (width >= 76em) {
   .content {
     width: 58.33%;
   }
+
   .sidebar {
     width: 41.66%;
   }
+
   .info {
     width: 50%;
   }
