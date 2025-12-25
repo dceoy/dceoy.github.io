@@ -12,3 +12,22 @@ jobs:
     permissions:
       contents: read
     uses: dceoy/gh-actions-for-devops/.github/workflows/html-lint-and-scan.yml@main
+    with:
+      package-path: .
+      node-version: latest
+  dependabot-auto-merge:
+    if: >
+      github.event_name == 'pull_request'
+      && github.event.pull_request.user.login == 'dependabot[bot]'
+    needs:
+      - html-lint-and-scan
+    permissions:
+      contents: write
+      pull-requests: write
+      actions: read
+    uses: dceoy/gh-actions-for-devops/.github/workflows/dependabot-auto-merge.yml@main
+    with:
+      unconditional: true
+      runs-on: ubuntu-slim
+    secrets:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
