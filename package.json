@@ -1,7 +1,7 @@
 {
   "name": "dceoy.github.io",
   "private": true,
-  "packageManager": "pnpm@9.15.9",
+  "packageManager": "pnpm@10.27.0",
   "scripts": {
     "lint:html": "htmlhint \"**/*.html\" && prettier --check \"**/*.html\"",
     "lint:css": "stylelint \"**/*.css\" && prettier --check \"**/*.css\"",
