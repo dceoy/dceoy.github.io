@@ -3,14 +3,10 @@
   "private": true,
   "packageManager": "pnpm@10.28.0",
   "scripts": {
-    "lint:html": "htmlhint \"**/*.html\" && prettier --check \"**/*.html\"",
-    "lint:css": "stylelint \"**/*.css\" && prettier --check \"**/*.css\"",
-    "lint:js": "eslint --ext .js,.jsx,.ts,.tsx --no-error-on-unmatched-pattern . && prettier --check --no-error-on-unmatched-pattern \"**/*.{js,jsx,ts,tsx}\"",
-    "format:html": "prettier --write \"**/*.html\"",
-    "format:css": "prettier --write \"**/*.css\" && stylelint --fix \"**/*.css\"",
-    "format:js": "eslint --fix --ext .js,.jsx,.ts,.tsx --no-error-on-unmatched-pattern . && prettier --write --no-error-on-unmatched-pattern \"**/*.{js,jsx,ts,tsx}\"",
-    "format": "pnpm run format:html && pnpm run format:css && pnpm run format:js",
-    "lint": "pnpm run lint:html && pnpm run lint:css && pnpm run lint:js"
+    "lint": "htmlhint \"**/*.html\" && stylelint \"**/*.css\" && eslint --ext .js,.jsx,.ts,.tsx --no-error-on-unmatched-pattern .",
+    "lint:fix": "stylelint --fix \"**/*.css\" && eslint --fix --ext .js,.jsx,.ts,.tsx --no-error-on-unmatched-pattern .",
+    "format": "prettier --write \"**/*.{html,css,js,jsx,ts,tsx}\"",
+    "format:check": "prettier --check \"**/*.{html,css,js,jsx,ts,tsx}\""
   },
   "devDependencies": {
     "eslint-config-airbnb": "^19.0.4",
