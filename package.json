@@ -6,8 +6,11 @@
     "lint:html": "htmlhint \"**/*.html\" && prettier --check \"**/*.html\"",
     "lint:css": "stylelint \"**/*.css\" && prettier --check \"**/*.css\"",
     "lint:js": "eslint --ext .js,.jsx,.ts,.tsx --no-error-on-unmatched-pattern . && prettier --check --no-error-on-unmatched-pattern \"**/*.{js,jsx,ts,tsx}\"",
-    "format": "prettier --write \"**/*.{html,css,js,json,md}\" && stylelint --fix \"**/*.css\"",
-    "lint": "pnpm lint:html && pnpm lint:css && pnpm lint:js"
+    "format:html": "prettier --write \"**/*.html\"",
+    "format:css": "prettier --write \"**/*.css\" && stylelint --fix \"**/*.css\"",
+    "format:js": "eslint --fix --ext .js,.jsx,.ts,.tsx --no-error-on-unmatched-pattern . && prettier --write --no-error-on-unmatched-pattern \"**/*.{js,jsx,ts,tsx}\"",
+    "format": "pnpm run format:html && pnpm run format:css && pnpm run format:js",
+    "lint": "pnpm run lint:html && pnpm run lint:css && pnpm run lint:js"
   },
   "devDependencies": {
     "eslint-config-airbnb": "^19.0.4",
