@@ -1,7 +1,7 @@
 {
   "name": "dceoy.github.io",
   "private": true,
-  "packageManager": "pnpm@10.28.0",
+  "packageManager": "pnpm@10.28.1",
   "scripts": {
     "lint": "htmlhint \"**/*.html\" && stylelint \"**/*.css\" && eslint --ext .js,.jsx,.ts,.tsx --no-error-on-unmatched-pattern .",
     "lint:fix": "stylelint --fix \"**/*.css\" && eslint --fix --ext .js,.jsx,.ts,.tsx --no-error-on-unmatched-pattern .",
