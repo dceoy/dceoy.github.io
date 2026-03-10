@@ -1,7 +1,7 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.4.6/schema.json",
   "files": {
-    "includes": ["**", "!dead-simple-grid/**", "!node_modules/**"]
+    "includes": ["**", "!dead-simple-grid", "!node_modules"]
   },
   "formatter": {
     "enabled": true,
