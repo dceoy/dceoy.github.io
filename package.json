@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.6",
-    "htmlhint": "^1.9.1",
+    "htmlhint": "^1.9.2",
     "markdownlint-cli2": "^0.21.0",
     "oxlint": "^1.52.0",
     "prettier": "^3.8.1",
