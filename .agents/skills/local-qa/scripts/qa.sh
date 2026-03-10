@@ -6,6 +6,7 @@ cd "$(git rev-parse --show-toplevel)"
 # HTML/CSS/JavaScript
 pnpm run format
 pnpm run lint:fix
+pnpm run audit:fix
 
 # GitHub Actions
 zizmor --fix=safe .github/workflows

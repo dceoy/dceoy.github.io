@@ -3,6 +3,8 @@
   "private": true,
   "packageManager": "pnpm@10.30.3",
   "scripts": {
+    "audit": "pnpm audit",
+    "audit:fix": "pnpm audit --fix",
     "lint": "htmlhint '**/*.html' && stylelint '**/*.css' && oxlint . && biome check .",
     "lint:fix": "stylelint --fix '**/*.css' && oxlint --fix . && biome check --write .",
     "format": "biome format --write . && prettier --write '*.md'",
