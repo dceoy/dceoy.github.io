@@ -3,17 +3,21 @@
   "private": true,
   "packageManager": "pnpm@10.30.3",
   "scripts": {
-    "lint": "htmlhint \"**/*.html\" && stylelint \"**/*.css\" && oxlint . && biome check .",
-    "lint:fix": "stylelint --fix \"**/*.css\" && oxlint --fix . && biome check --write .",
-    "format": "biome format --write .",
-    "format:check": "biome format ."
+    "lint": "htmlhint \"**/*.html\" && stylelint \"**/*.css\" && pnpm dlx oxlint . && pnpm dlx @biomejs/biome check .",
+    "lint:fix": "stylelint --fix \"**/*.css\" && pnpm dlx oxlint --fix . && pnpm dlx @biomejs/biome check --write .",
+    "format": "pnpm dlx @biomejs/biome format --write .",
+    "format:check": "pnpm dlx @biomejs/biome format ."
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
+    "eslint": "^9.39.2",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-toml": "^1.0.4",
     "htmlhint": "^1.9.1",
     "markdownlint-cli2": "^0.21.0",
-    "oxlint": "^1.29.0",
+    "prettier": "^3.8.1",
     "stylelint": "^16.26.1",
+    "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-standard": "^39.0.1"
   },
   "stylelint": {
