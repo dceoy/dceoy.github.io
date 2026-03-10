@@ -10,10 +10,7 @@
 
 - `docker compose up` runs the `nginx-autoindex` container and serves the repository over HTTP for local preview.
 - `pnpm install` installs linting/formatting dependencies listed in `package.json`.
-- `pnpm run lint` runs HTML/CSS/JS lint checks; run this before submitting changes.
-- `pnpm run lint:fix` fixes lint issues where possible.
-- `pnpm run format` formats supported file types with Prettier and fixes CSS with Stylelint.
-- `pnpm run foramt:check` verifies formatting without modifying files.
+- `local-qa` skill runs linting and formatting checks; run this before committing changes to catch issues early.
 - There is no build step; changes to HTML/CSS are served as-is by GitHub Pages/Cloudflare Pages.
 - There is no automated test suite in this repository.
 
