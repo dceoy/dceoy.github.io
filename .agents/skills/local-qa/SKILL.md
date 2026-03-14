@@ -5,11 +5,7 @@ description: Run local QA for the repository. Use when asked to run formatting, 
 
 # Local QA (format and lint)
 
-Run the local QA script from the directory of this file:
-
-```bash
-./scripts/qa.sh
-```
+Run the local QA script `scripts/qa.sh` in this skill.
 
 ## Procedure
 
