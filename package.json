@@ -5,8 +5,8 @@
   "scripts": {
     "audit": "pnpm audit",
     "audit:fix": "pnpm audit --fix",
-    "lint": "htmlhint '**/*.html' && stylelint '**/*.css' && oxlint . && biome check .",
-    "lint:fix": "stylelint --fix '**/*.css' && oxlint --fix . && biome check --write .",
+    "lint": "htmlhint '**/*.html' && stylelint '**/*.css' && oxlint --no-error-on-unmatched-pattern . && biome check .",
+    "lint:fix": "stylelint --fix '**/*.css' && oxlint --fix --no-error-on-unmatched-pattern . && biome check --write .",
     "format": "biome format --write . && prettier --write '*.md'",
     "format:check": "biome format . && prettier --check '*.md'"
   },
