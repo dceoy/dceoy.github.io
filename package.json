@@ -4,7 +4,7 @@
   "packageManager": "pnpm@11.5.2",
   "scripts": {
     "audit": "pnpm audit",
-    "audit:fix": "pnpm audit --fix",
+    "audit:fix": "pnpm audit --fix override",
     "lint": "htmlhint '**/*.html' && stylelint '**/*.css' && oxlint --no-error-on-unmatched-pattern . && biome check .",
     "lint:fix": "stylelint --fix '**/*.css' && oxlint --fix --no-error-on-unmatched-pattern . && biome check --write .",
     "format": "biome format --write . && prettier --write '*.md'",
