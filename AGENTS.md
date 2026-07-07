@@ -4,7 +4,7 @@
 
 - Root static site files live at the repository root: `index.html`, `style.css`, `dead-simple-grid.css`, `favicon.ico`, and `ads.txt`.
 - `dead-simple-grid.css` contains vendored CSS from the former grid dependency; keep site-specific overrides in `style.css`.
-- Preserve the copyright/source attribution at the top of `dead-simple-grid.css` when editing vendored rules.
+- Preserve the copyright/source attribution at the top of `dead-simple-grid.css` when editing vendored rules; the upstream repository did not include a separate LICENSE file when the CSS was vendored.
 - `compose.yml` provides a local preview server via an Nginx autoindex container.
 
 ## Build, Test, and Development Commands
