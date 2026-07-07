@@ -88,6 +88,7 @@ iframe {
 
 .footer {
   padding-top: 1.5em;
+  border-top: 1px dotted #aaa;
 }
 
 .desc {
@@ -106,16 +107,12 @@ iframe {
 
 /* Minor responsive adjustments. */
 
-.footer {
-  border-top: 1px dotted #aaa;
-}
-
 .content {
   margin-bottom: 1.5em;
   border-bottom: 1px dotted #aaa;
 }
 
-@media only screen and (min-width: 34em) {
+@media only screen and (width >= 34em) {
   p,
   ul {
     font-size: 0.875em;
@@ -139,7 +136,7 @@ iframe {
   }
 }
 
-@media only screen and (min-width: 54em) {
+@media only screen and (width >= 54em) {
   .content {
     margin-bottom: 0;
     border: none;
@@ -159,7 +156,7 @@ iframe {
   }
 }
 
-@media only screen and (min-width: 76em) {
+@media only screen and (width >= 76em) {
   .info:first-child {
     border-right: 1px dotted #aaa;
   }
