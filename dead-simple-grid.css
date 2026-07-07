@@ -1,4 +1,16 @@
-/* Dead Simple Grid (c) 2015 Vladimir Agafonkin */
+/*
+ * Vendored from Dead Simple Grid by Vladimir Agafonkin.
+ * Source: https://github.com/dceoy/dead-simple-grid/tree/gh-pages
+ *
+ * This file incorporates the complete CSS from:
+ * - css/grid.css: Dead Simple Grid (c) 2015 Vladimir Agafonkin
+ * - css/screen.css
+ *
+ * No separate LICENSE file was present in the source repository when vendored;
+ * keep the upstream copyright notice and source attribution with this file.
+ */
+
+/* css/grid.css */
 
 .row .row {
   margin: 0 -1.5em;
@@ -21,6 +33,8 @@
     width: 100%;
   }
 }
+
+/* css/screen.css */
 
 body {
   margin: 0;
@@ -75,7 +89,6 @@ iframe {
 
 .footer {
   padding-top: 1.5em;
-  border-top: 1px dotted #aaa;
 }
 
 .desc {
@@ -92,15 +105,30 @@ iframe {
   border-top: 1px dotted #bbb;
 }
 
+/* minor responsive adjustments */
+
+.footer {
+  border-top: 1px dotted #aaa;
+}
+
 .content {
   margin-bottom: 1.5em;
   border-bottom: 1px dotted #aaa;
 }
 
-@media only screen and (width >= 34em) {
+@media only screen and (min-width: 34em) {
   p,
   ul {
     font-size: 0.875em;
+  }
+
+  .feature:first-child,
+  .info:first-child {
+    border-right: 1px dotted #aaa;
+  }
+
+  .container {
+    padding: 1em;
   }
 
   h1 {
@@ -110,26 +138,9 @@ iframe {
   h2 {
     font-size: 1.6em;
   }
-
-  .container {
-    padding: 1em;
-  }
-
-  .feature:first-child,
-  .info:first-child {
-    border-right: 1px dotted #aaa;
-  }
 }
 
-@media only screen and (width >= 54em) {
-  h1 {
-    font-size: 3em;
-  }
-
-  h2 {
-    font-size: 1.7em;
-  }
-
+@media only screen and (min-width: 54em) {
   .content {
     margin-bottom: 0;
     border: none;
@@ -139,18 +150,26 @@ iframe {
   .info:first-child {
     border: none;
   }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    font-size: 1.7em;
+  }
 }
 
-@media only screen and (width >= 76em) {
+@media only screen and (min-width: 76em) {
+  .info:first-child {
+    border-right: 1px dotted #aaa;
+  }
+
   h1 {
     font-size: 3.2em;
   }
 
   h2 {
     font-size: 1.8em;
-  }
-
-  .info:first-child {
-    border-right: 1px dotted #aaa;
   }
 }
