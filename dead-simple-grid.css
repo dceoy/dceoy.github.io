@@ -1,0 +1,171 @@
+/*
+ * Vendored from Dead Simple Grid by Vladimir Agafonkin.
+ * Source: https://github.com/dceoy/dead-simple-grid/tree/gh-pages
+ *
+ * This file incorporates the complete CSS from css/grid.css and css/screen.css.
+ * The upstream repository did not include a separate LICENSE file when vendored.
+ * Keep the copyright notice and source attribution with this file.
+ *
+ * Dead Simple Grid (c) 2015 Vladimir Agafonkin
+ */
+
+/* css/grid.css */
+
+.row .row {
+  margin: 0 -1.5em;
+}
+
+.col {
+  padding: 0 1.5em;
+}
+
+.row::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+@media only screen {
+  .col {
+    box-sizing: border-box;
+    float: left;
+    width: 100%;
+  }
+}
+
+/* css/screen.css */
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #06f;
+}
+
+h1 {
+  font-size: 2.2em;
+}
+
+h2 {
+  font-size: 1.4em;
+}
+
+h2,
+h3,
+h4 {
+  margin-top: 0;
+}
+
+h3,
+h4 {
+  margin-bottom: 0.5em;
+}
+
+p,
+ul {
+  margin: 0 0 1.5em;
+  font-size: 0.8125em;
+  line-height: 1.5;
+}
+
+code {
+  color: #777;
+  font-size: 1.2727em;
+}
+
+iframe {
+  overflow: hidden;
+  border: 0;
+}
+
+.container {
+  max-width: 90em;
+  margin: 0 auto;
+  padding: 1em 0;
+}
+
+.footer {
+  padding-top: 1.5em;
+  border-top: 1px dotted #aaa;
+}
+
+.desc {
+  color: #888;
+}
+
+.intro {
+  padding-bottom: 1.5em;
+  border-bottom: 1px dotted #bbb;
+}
+
+.social {
+  padding-top: 1.5em;
+  border-top: 1px dotted #bbb;
+}
+
+/* Minor responsive adjustments. */
+
+.content {
+  margin-bottom: 1.5em;
+  border-bottom: 1px dotted #aaa;
+}
+
+@media only screen and (width >= 34em) {
+  p,
+  ul {
+    font-size: 0.875em;
+  }
+
+  .feature:first-child,
+  .info:first-child {
+    border-right: 1px dotted #aaa;
+  }
+
+  .container {
+    padding: 1em;
+  }
+
+  h1 {
+    font-size: 2.6em;
+  }
+
+  h2 {
+    font-size: 1.6em;
+  }
+}
+
+@media only screen and (width >= 54em) {
+  .content {
+    margin-bottom: 0;
+    border: none;
+    border-right: 1px dotted #aaa;
+  }
+
+  .info:first-child {
+    border: none;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    font-size: 1.7em;
+  }
+}
+
+@media only screen and (width >= 76em) {
+  .info:first-child {
+    border-right: 1px dotted #aaa;
+  }
+
+  h1 {
+    font-size: 3.2em;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+}
