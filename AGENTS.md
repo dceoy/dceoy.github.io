@@ -2,8 +2,8 @@
 
 ## Project Structure & Module Organization
 
-- Root static site files live at the repository root: `index.html`, `style.css`, `favicon.ico`, and `ads.txt`.
-- `dead-simple-grid/` contains a vendored CSS grid demo and its README/LICENSE; avoid editing unless you are updating the upstream asset.
+- Root static site files live at the repository root: `index.html`, `style.css`, `dead-simple-grid.css`, `favicon.ico`, and `ads.txt`.
+- `dead-simple-grid.css` contains vendored CSS from the former grid dependency; keep site-specific overrides in `style.css`.
 - `compose.yml` provides a local preview server via an Nginx autoindex container.
 
 ## Build, Test, and Development Commands
@@ -18,13 +18,13 @@
 
 - Use 2-space indentation in HTML and CSS to match existing files.
 - Keep HTML5 markup simple and readable; prefer lowercase tags and double-quoted attributes.
-- CSS lives in `style.css`; avoid introducing new files unless there is a clear need.
+- Keep vendored layout rules in `dead-simple-grid.css` and site-specific styling in `style.css`.
 - Static assets (icons, images) should be placed at the repository root and referenced with relative paths (e.g., `favicon.ico`).
 
 ## Testing Guidelines
 
 - No test framework is configured. Validate changes by running the local preview (`docker compose up`) and checking the rendered page in a browser.
-- When you touch HTML/CSS/JS, run `pnpm run lint` and `pnpm run foramt:check` to catch linting or formatting issues.
+- When you touch HTML/CSS/JS, run `pnpm run lint` and `pnpm run format:check` to catch linting or formatting issues.
 
 ## Commit & Pull Request Guidelines
 

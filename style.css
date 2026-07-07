@@ -1,8 +1,6 @@
 @import url("//fonts.googleapis.com/css?family=Ubuntu");
-@import url("dead-simple-grid/css/grid.css");
-@import url("dead-simple-grid/css/screen.css");
 
-/*!
+/*
  * The code for animation is a fork of the following code:
  *
  *   Pure CSS Gradient Background Animation by Manuel Pinto
@@ -33,10 +31,6 @@ body {
   }
 }
 
-.container {
-  max-width: 90em;
-}
-
 a {
   color: #e8ff96;
   text-decoration: none;
@@ -51,8 +45,8 @@ a[href]:hover {
 }
 
 .ad-unit {
-  text-align: center;
   color: #bbb;
+  text-align: center;
 }
 
 ul.circlebullet {
