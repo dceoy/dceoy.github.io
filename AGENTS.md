@@ -3,7 +3,7 @@
 ## Project Structure & Module Organization
 
 - Root static site files live at the repository root: `index.html`, `style.css`, `dead-simple-grid.css`, `favicon.ico`, and `ads.txt`.
-- `dead-simple-grid.css` contains the complete vendored CSS from `dead-simple-grid/css/grid.css` and `dead-simple-grid/css/screen.css`.
+- `dead-simple-grid.css` vendors `dead-simple-grid/css/grid.css` and `dead-simple-grid/css/screen.css` in full.
 - Preserve the copyright/source attribution at the top of `dead-simple-grid.css` when editing vendored rules.
 - `compose.yml` provides a local preview server via an Nginx autoindex container.
 
