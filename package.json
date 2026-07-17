@@ -11,7 +11,7 @@
     "format:check": "biome format . && prettier --check '*.md'"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.5.3",
+    "@biomejs/biome": "2.5.4",
     "htmlhint": "^1.9.2",
     "markdownlint-cli2": "^0.23.0",
     "oxlint": "^1.74.0",
