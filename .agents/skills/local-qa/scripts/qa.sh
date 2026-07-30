@@ -4,6 +4,7 @@ set -euox pipefail
 cd "$(git rev-parse --show-toplevel)"
 
 # HTML/CSS/JavaScript
+pnpm -y install
 pnpm run format
 pnpm run lint:fix
 pnpm run audit:fix
