@@ -28,7 +28,7 @@ jobs:
       - name: Refresh audited overrides
         run: |
           pnpm audit --fix override || true
-          pnpm install
+          pnpm install --no-frozen-lockfile
           pnpm audit
       - name: Commit lockfile updates
         env:
