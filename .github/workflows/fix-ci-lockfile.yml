@@ -28,6 +28,14 @@ jobs:
       - name: Refresh audited overrides
         run: |
           pnpm audit --fix override || true
+          python - <<'PY'
+          from pathlib import Path
+          path = Path("pnpm-workspace.yaml")
+          lines = [line for line in path.read_text().splitlines() if not line.startswith("  fast-uri@")]
+          index = lines.index("overrides:") + 1
+          lines.insert(index, "  fast-uri: ^4.1.2")
+          path.write_text("\n".join(lines) + "\n")
+          PY
           pnpm install --no-frozen-lockfile
           pnpm audit
       - name: Commit lockfile updates
