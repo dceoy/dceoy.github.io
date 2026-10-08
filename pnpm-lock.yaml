@@ -43,13 +43,13 @@ importers:
         version: 3.9.9
       stylelint:
         specifier: ^17.14.1
-        version: 17.15.0(supports-color@10.2.2)
+        version: 17.16.0(supports-color@10.2.2)
       stylelint-config-prettier:
         specifier: ^9.0.5
-        version: 9.0.5(stylelint@17.15.0(supports-color@10.2.2))
+        version: 9.0.5(stylelint@17.16.0(supports-color@10.2.2))
       stylelint-config-standard:
         specifier: ^40.0.0
-        version: 40.0.0(stylelint@17.15.0(supports-color@10.2.2))
+        version: 40.0.0(stylelint@17.16.0(supports-color@10.2.2))
 
 packages:
 
@@ -941,8 +941,8 @@ packages:
     peerDependencies:
       stylelint: ^17.0.0
 
-  stylelint@17.15.0:
-    resolution: {integrity: sha512-mWIkesYQvQjf4Kvdeu9ns0IL8/K/wtjaGxPqsPd6DlLZvaQxGysJsocxUDrBcyHQ5VleAk4uSMat4yMrVED7PA==}
+  stylelint@17.16.0:
+    resolution: {integrity: sha512-ejlWnbJ13x1GU32+zZXa6sYQJsKKkwSdv2B4rAdO3OWdEmvhSJKcXi5pOphQYSzyaj1kXpuGJr7pcMBNfDIuPw==}
     engines: {node: '>=20.19.0'}
     hasBin: true
 
@@ -1835,20 +1835,20 @@ snapshots:
 
   strip-json-comments@3.1.1: {}
 
-  stylelint-config-prettier@9.0.5(stylelint@17.15.0(supports-color@10.2.2)):
+  stylelint-config-prettier@9.0.5(stylelint@17.16.0(supports-color@10.2.2)):
     dependencies:
-      stylelint: 17.15.0(supports-color@10.2.2)
+      stylelint: 17.16.0(supports-color@10.2.2)
 
-  stylelint-config-recommended@18.0.0(stylelint@17.15.0(supports-color@10.2.2)):
+  stylelint-config-recommended@18.0.0(stylelint@17.16.0(supports-color@10.2.2)):
     dependencies:
-      stylelint: 17.15.0(supports-color@10.2.2)
+      stylelint: 17.16.0(supports-color@10.2.2)
 
-  stylelint-config-standard@40.0.0(stylelint@17.15.0(supports-color@10.2.2)):
+  stylelint-config-standard@40.0.0(stylelint@17.16.0(supports-color@10.2.2)):
     dependencies:
-      stylelint: 17.15.0(supports-color@10.2.2)
-      stylelint-config-recommended: 18.0.0(stylelint@17.15.0(supports-color@10.2.2))
+      stylelint: 17.16.0(supports-color@10.2.2)
+      stylelint-config-recommended: 18.0.0(stylelint@17.16.0(supports-color@10.2.2))
 
-  stylelint@17.15.0(supports-color@10.2.2):
+  stylelint@17.16.0(supports-color@10.2.2):
     dependencies:
       '@csstools/css-calc': 3.3.0(@csstools/css-parser-algorithms@4.0.0(@csstools/css-tokenizer@4.0.0))(@csstools/css-tokenizer@4.0.0)
       '@csstools/css-parser-algorithms': 4.0.0(@csstools/css-tokenizer@4.0.0)
