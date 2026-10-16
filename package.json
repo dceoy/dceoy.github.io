@@ -5,24 +5,15 @@
   "scripts": {
     "audit": "pnpm audit",
     "audit:fix": "pnpm audit --fix override",
-    "lint": "htmlhint '**/*.html' && stylelint '**/*.css' && oxlint --no-error-on-unmatched-pattern . && biome check .",
-    "lint:fix": "stylelint --fix '**/*.css' && oxlint --fix --no-error-on-unmatched-pattern . && biome check --write .",
+    "lint": "htmlhint '**/*.html' && oxlint --no-error-on-unmatched-pattern . && biome check .",
+    "lint:fix": "oxlint --fix --no-error-on-unmatched-pattern . && biome check --write .",
     "format": "biome format --write . && prettier --write '*.md'",
     "format:check": "biome format . && prettier --check '*.md'"
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.15",
     "htmlhint": "^1.9.2",
-    "markdownlint-cli2": "^0.23.2",
     "oxlint": "^1.78.0",
-    "prettier": "^3.9.6",
-    "stylelint": "^17.14.1",
-    "stylelint-config-prettier": "^9.0.5",
-    "stylelint-config-standard": "^40.0.0"
-  },
-  "stylelint": {
-    "extends": [
-      "stylelint-config-standard"
-    ]
+    "prettier": "^3.9.6"
   }
 }
