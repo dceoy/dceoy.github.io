@@ -7,13 +7,14 @@
     "audit:fix": "pnpm audit --fix override",
     "lint": "htmlhint '**/*.html' && stylelint '**/*.css' && oxlint --no-error-on-unmatched-pattern . && biome check .",
     "lint:fix": "stylelint --fix '**/*.css' && oxlint --fix --no-error-on-unmatched-pattern . && biome check --write .",
-    "format": "biome format --write . && pnpm dlx oxfmt@0.72.0 --write '*.md' --no-error-on-unmatched-pattern",
-    "format:check": "biome format . && pnpm dlx oxfmt@0.72.0 --check '*.md' --no-error-on-unmatched-pattern"
+    "format": "biome format --write . && oxfmt --write '*.md' --no-error-on-unmatched-pattern",
+    "format:check": "biome format . && oxfmt --check '*.md' --no-error-on-unmatched-pattern"
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.15",
     "htmlhint": "^1.9.2",
     "markdownlint-cli2": "^0.23.2",
+    "oxfmt": "0.72.0",
     "oxlint": "^1.88.0",
     "prettier": "^3.9.6",
     "stylelint": "^17.14.1",
