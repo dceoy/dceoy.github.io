@@ -11,6 +11,8 @@ on:
       - opened
       - synchronize
       - reopened
+permissions:
+  contents: read
 jobs:
   typescript-lint-and-test:
     if: >
