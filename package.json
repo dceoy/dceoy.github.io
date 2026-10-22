@@ -1,7 +1,7 @@
 {
   "name": "dceoy.github.io",
   "private": true,
-  "packageManager": "pnpm@12.13.0",
+  "packageManager": "pnpm@12.14.0",
   "scripts": {
     "audit": "pnpm audit",
     "audit:fix": "pnpm audit --fix override",
