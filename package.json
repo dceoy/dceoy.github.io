@@ -1,7 +1,6 @@
 {
   "name": "dceoy.github.io",
   "private": true,
-  "packageManager": "pnpm@12.14.0",
   "scripts": {
     "audit": "pnpm audit",
     "audit:fix": "pnpm audit --fix override",
@@ -11,15 +10,19 @@
     "format:check": "biome format . && oxfmt --check '*.md' --no-error-on-unmatched-pattern"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.5.15",
-    "htmlhint": "^1.9.2",
-    "markdownlint-cli2": "^0.23.2",
-    "oxfmt": "0.74.0",
-    "oxlint": "^1.89.0",
-    "prettier": "^3.9.6",
-    "stylelint": "^17.14.1",
-    "stylelint-config-prettier": "^9.0.5",
-    "stylelint-config-standard": "^40.0.0"
+    "@biomejs/biome": "latest",
+    "htmlhint": "latest",
+    "markdownlint-cli2": "latest",
+    "oxfmt": "latest",
+    "oxlint": "latest",
+    "prettier": "latest",
+    "stylelint": "latest",
+    "stylelint-config-prettier": "latest",
+    "stylelint-config-standard": "latest"
+  },
+  "engines": {
+    "node": ">=22",
+    "pnpm": ">=12"
   },
   "stylelint": {
     "extends": [
