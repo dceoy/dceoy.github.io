@@ -1,5 +1,4 @@
 ---
-
 name: local-qa
 description: Run local QA including formatting and linting for the repository. Use whenever any file has been updated.
 disable-model-invocation: false
