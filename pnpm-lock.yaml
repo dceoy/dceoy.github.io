@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  fast-uri: ^4.1.3
+  fast-uri: ^4.2.3
   ajv@>=7.0.0-alpha.0 <8.18.0: '>=8.18.0'
   brace-expansion@<=5.0.7: ^5.0.8
   brace-expansion@>=3.0.0 <5.0.7: ^5.0.7
@@ -37,6 +37,9 @@ importers:
       markdownlint-cli2:
         specifier: latest
         version: 0.23.3(supports-color@10.2.2)
+      node:
+        specifier: runtime:>=22.23.4
+        version: runtime:26.12.1
       oxfmt:
         specifier: latest
         version: 0.73.0
@@ -597,8 +600,8 @@ packages:
     resolution: {integrity: sha512-7MptL8U0cqcFdzIzwOTHoilX9x5BrNqye7Z/LuC7kCMRio1EMSyqRK3BEAUD7sXRq4iT4AzTVuZdhgQ2TCvYLg==}
     engines: {node: '>=8.6.0'}
 
-  fast-uri@4.2.2:
-    resolution: {integrity: sha512-EwVpUMzLVNOmcWW0zi5G3JJwkopB6XXjnVvNBGfqrMMsVew2hkQWl5e/pe/CfYUeS6jt4cIO2MnamEW7v/7wPw==}
+  fast-uri@4.2.3:
+    resolution: {integrity: sha512-I1PXwP5eAhlNlcdpjt9CgB59op2ZvZfxw+BkqGFVIUOgNpCVTcTqp3HhTX7brxj5vsip+nSY4nTvff+eIA76hg==}
 
   fastest-levenshtein@1.0.16:
     resolution: {integrity: sha512-eRnCtTTtGZFpQCwhJiUOuxPQWRXVKYDn0b2PeHfXL6/Zi53SLAzAHfVhVWK2AryC/WH05kGfxhFIPvTF0SXQzg==}
@@ -917,6 +920,138 @@ packages:
   node-sarif-builder@3.2.0:
     resolution: {integrity: sha512-kVIOdynrF2CRodHZeP/97Rh1syTUHBNiw17hUCIVhlhEsWlfJm19MuO56s4MdKbr22xWx6mzMnNAgXzVlIYM9Q==}
     engines: {node: '>=18'}
+
+  node@runtime:26.12.1:
+    resolution:
+      type: variations
+      variants:
+        - resolution:
+            archive: tarball
+            bin:
+              node: bin/node
+            integrity: sha256-DLlub0CRtke2b4EQMNXEvw0Kbm9H5B4SSBe2RMr/kcE=
+            type: binary
+            url: https://nodejs.org/download/release/v26.12.1/node-v26.12.1-aix-ppc64.tar.gz
+          targets:
+            - cpu: ppc64
+              os: aix
+        - resolution:
+            archive: tarball
+            bin:
+              node: bin/node
+            integrity: sha256-GQHVOZEsAq+hDRzBJpQ6iFWn7t6+gwEZRjRw215sWeg=
+            type: binary
+            url: https://nodejs.org/download/release/v26.12.1/node-v26.12.1-darwin-arm64.tar.gz
+          targets:
+            - cpu: arm64
+              os: darwin
+        - resolution:
+            archive: tarball
+            bin:
+              node: bin/node
+            integrity: sha256-uFwupEIK0LxKvy3Gzx9VEw7WgfHKv2DPP1JuTJ4nEv8=
+            type: binary
+            url: https://nodejs.org/download/release/v26.12.1/node-v26.12.1-darwin-x64.tar.gz
+          targets:
+            - cpu: x64
+              os: darwin
+        - resolution:
+            archive: tarball
+            bin:
+              node: bin/node
+            integrity: sha256-psAa9FndiXKrP7CO5dqBJE0muoxJRKYtW7uoxZeuFU8=
+            type: binary
+            url: https://nodejs.org/download/release/v26.12.1/node-v26.12.1-linux-arm64.tar.gz
+          targets:
+            - cpu: arm64
+              os: linux
+        - resolution:
+            archive: tarball
+            bin:
+              node: bin/node
+            integrity: sha256-lnFXnUWHMf6rAX+bGZ8hUAVKtxkQotbN81QAQoUbMnA=
+            type: binary
+            url: https://nodejs.org/download/release/v26.12.1/node-v26.12.1-linux-ppc64le.tar.gz
+          targets:
+            - cpu: ppc64le
+              os: linux
+        - resolution:
+            archive: tarball
+            bin:
+              node: bin/node
+            integrity: sha256-2oK09HBZlNL5IpHjStc2IHpaa4sTm2k5OHXYEwLtedg=
+            type: binary
+            url: https://nodejs.org/download/release/v26.12.1/node-v26.12.1-linux-s390x.tar.gz
+          targets:
+            - cpu: s390x
+              os: linux
+        - resolution:
+            archive: tarball
+            bin:
+              node: bin/node
+            integrity: sha256-Q8QG48qIFItZaBoHu5Ru3HXeAF1e9IuZg1IizyyHiT0=
+            type: binary
+            url: https://nodejs.org/download/release/v26.12.1/node-v26.12.1-linux-x64-musl.tar.gz
+          targets:
+            - cpu: x64
+              os: linux
+              libc: musl
+        - resolution:
+            archive: tarball
+            bin:
+              node: bin/node
+            integrity: sha256-D9Hrd3BZj1KiGZXt9u01/GkEAPpDfCOGrzKVGekUMTI=
+            type: binary
+            url: https://nodejs.org/download/release/v26.12.1/node-v26.12.1-linux-x64.tar.gz
+          targets:
+            - cpu: x64
+              os: linux
+        - resolution:
+            archive: zip
+            bin:
+              node: node.exe
+            integrity: sha256-NFZ1ge5jlns3r7a3oMxjotVQpD1dg4rbdZgtfjVvLiw=
+            prefix: node-v26.12.1-win-arm64
+            type: binary
+            url: https://nodejs.org/download/release/v26.12.1/node-v26.12.1-win-arm64.zip
+          targets:
+            - cpu: arm64
+              os: win32
+        - resolution:
+            archive: zip
+            bin:
+              node: node.exe
+            integrity: sha256-s+/Vxwy6MwjtRufmmam4qsB1u8awJ/yznITDGswl4rQ=
+            prefix: node-v26.12.1-win-x64
+            type: binary
+            url: https://nodejs.org/download/release/v26.12.1/node-v26.12.1-win-x64.zip
+          targets:
+            - cpu: x64
+              os: win32
+        - resolution:
+            archive: tarball
+            bin:
+              node: bin/node
+            integrity: sha256-w2lFUfbLiI/gvvtMsuE//kWwuyUo7BQefDopp9eXTRM=
+            type: binary
+            url: https://unofficial-builds.nodejs.org/download/release/v26.12.1/node-v26.12.1-linux-arm64-musl.tar.gz
+          targets:
+            - cpu: arm64
+              os: linux
+              libc: musl
+        - resolution:
+            archive: tarball
+            bin:
+              node: bin/node
+            integrity: sha256-i/nMDn+OPH7FNo3KGSQsrWUbawnTW83PKQrD+Akl6N0=
+            type: binary
+            url: https://unofficial-builds.nodejs.org/download/release/v26.12.1/node-v26.12.1-linux-x64-musl.tar.gz
+          targets:
+            - cpu: x64
+              os: linux
+              libc: musl
+    version: 26.12.1
+    hasBin: true
 
   normalize-path@3.0.0:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
@@ -1377,7 +1512,7 @@ snapshots:
   ajv@8.20.0:
     dependencies:
       fast-deep-equal: 3.1.3
-      fast-uri: 4.2.2
+      fast-uri: 4.2.3
       json-schema-traverse: 1.0.0
       require-from-string: 2.0.2
 
@@ -1492,7 +1627,7 @@ snapshots:
       merge2: 1.4.1
       micromatch: 4.0.8
 
-  fast-uri@4.2.2: {}
+  fast-uri@4.2.3: {}
 
   fastest-levenshtein@1.0.16: {}
 
@@ -1907,6 +2042,8 @@ snapshots:
     dependencies:
       '@types/sarif': 2.1.7
       fs-extra: 11.4.1
+
+  node@runtime:26.12.1: {}
 
   normalize-path@3.0.0: {}
 
