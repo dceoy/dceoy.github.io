@@ -9,7 +9,7 @@ updates:
     groups:
       github-actions-dependencies:
         patterns:
-          - '*'
+          - "*"
     cooldown:
       default-days: 1
   - package-ecosystem: npm
@@ -22,7 +22,7 @@ updates:
     groups:
       npm-dependencies:
         patterns:
-          - '*'
+          - "*"
   - package-ecosystem: docker-compose
     directory: /
     schedule:
@@ -31,6 +31,6 @@ updates:
     groups:
       docker-compose-dependencies:
         patterns:
-          - '*'
+          - "*"
     cooldown:
       default-days: 1
