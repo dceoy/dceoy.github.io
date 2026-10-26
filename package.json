@@ -4,10 +4,10 @@
   "scripts": {
     "audit": "pnpm audit",
     "audit:fix": "pnpm audit --fix override",
-    "lint": "pnpm htmlhint '**/*.html' && pnpm stylelint '**/*.css' && pnpm oxlint --no-error-on-unmatched-pattern . && pnpm biome check .",
-    "lint:fix": "pnpm stylelint --fix '**/*.css' && pnpm oxlint --fix --no-error-on-unmatched-pattern . && pnpm biome check --write .",
-    "format": "pnpm biome format --write . && pnpm oxfmt --write '*.md' --no-error-on-unmatched-pattern",
-    "format:check": "pnpm biome format . && pnpm oxfmt --check '*.md' --no-error-on-unmatched-pattern"
+    "lint": "pnpm htmlhint '**/*.html' && pnpm stylelint '**/*.css' && pnpm oxlint --no-error-on-unmatched-pattern . && pnpm biome check --md-formatter-enabled=false .",
+    "lint:fix": "pnpm stylelint --fix '**/*.css' && pnpm oxlint --fix --no-error-on-unmatched-pattern . && pnpm biome check --md-formatter-enabled=false --write .",
+    "format": "pnpm biome format --md-formatter-enabled=false --write . && pnpm oxfmt --write '**/*.{md,mdx}' --no-error-on-unmatched-pattern",
+    "format:check": "pnpm biome format --md-formatter-enabled=false . && pnpm oxfmt --check '**/*.{md,mdx}' --no-error-on-unmatched-pattern"
   },
   "devDependencies": {
     "@biomejs/biome": "latest",
