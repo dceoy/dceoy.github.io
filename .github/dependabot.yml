@@ -11,13 +11,13 @@ updates:
         patterns:
           - "*"
     cooldown:
-      default-days: 1
+      default-days: 7
   - package-ecosystem: npm
     directory: /
     schedule:
       interval: daily
     cooldown:
-      default-days: 1
+      default-days: 7
     open-pull-requests-limit: 10
     groups:
       npm-dependencies:
@@ -33,4 +33,4 @@ updates:
         patterns:
           - "*"
     cooldown:
-      default-days: 1
+      default-days: 7
