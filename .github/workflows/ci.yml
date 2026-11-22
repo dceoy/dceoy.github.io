@@ -25,21 +25,3 @@ jobs:
       package-scripts: lint,format:check
       package-path: .
       audit: true
-  dependabot-auto-merge:
-    if: >
-      github.event_name == 'pull_request'
-      && github.event.pull_request.user.login == 'dependabot[bot]'
-    needs:
-      - typescript-lint-and-test
-    permissions:
-      contents: write
-      pull-requests: write
-      actions: read
-      checks: read
-      statuses: read
-    uses: dceoy/gha-for-devops/.github/workflows/dependabot-auto-merge.yml@c073f5aac73a01f514f576ad5e7837fdbee7e96e  # v2.3.6
-    with:
-      unconditional: true
-      runs-on: ubuntu-slim
-    secrets:
-      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
