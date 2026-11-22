@@ -12,12 +12,10 @@
   "devDependencies": {
     "@biomejs/biome": "latest",
     "htmlhint": "latest",
-    "markdownlint-cli2": "latest",
     "oxfmt": "latest",
     "oxlint": "latest",
     "prettier": "latest",
     "stylelint": "latest",
-    "stylelint-config-prettier": "latest",
     "stylelint-config-standard": "latest"
   },
   "engines": {

@@ -40,15 +40,6 @@ a[href]:hover {
   text-decoration: underline;
 }
 
-.indented {
-  padding-left: 2em;
-}
-
-.ad-unit {
-  color: #bbb;
-  text-align: center;
-}
-
 ul.circlebullet {
   list-style: circle;
 }
@@ -57,13 +48,8 @@ ul.squarebullet {
   list-style: square;
 }
 
-code {
-  color: #fff;
-}
-
 @media only screen and (width >= 34em) {
-  .feature,
-  .info {
+  .feature {
     width: 50%;
   }
 }
@@ -76,10 +62,6 @@ code {
   .sidebar {
     width: 33.33%;
   }
-
-  .info {
-    width: 100%;
-  }
 }
 
 @media only screen and (width >= 76em) {
@@ -89,9 +71,5 @@ code {
 
   .sidebar {
     width: 41.66%;
-  }
-
-  .info {
-    width: 50%;
   }
 }
