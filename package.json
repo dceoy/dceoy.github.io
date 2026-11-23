@@ -4,7 +4,7 @@
   "scripts": {
     "audit": "pnpm audit",
     "audit:fix": "pnpm audit --fix override",
-    "lint": "pnpm htmlhint '**/*.html' && pnpm stylelint '**/*.css' && pnpm oxlint --no-error-on-unmatched-pattern . && pnpm biome check --md-formatter-enabled=false .",
+    "lint": "pnpm htmlhint '**/*.html' && pnpm stylelint '**/*.css' && pnpm oxlint --no-error-on-unmatched-pattern . && pnpm biome check --md-formatter-enabled=false . && pnpm markdownlint-cli2 '**/*.md' '**/*.mdx'",
     "lint:fix": "pnpm stylelint --fix '**/*.css' && pnpm oxlint --fix --no-error-on-unmatched-pattern . && pnpm biome check --md-formatter-enabled=false --write .",
     "format": "pnpm biome format --md-formatter-enabled=false --write . && pnpm oxfmt --write '**/*.{md,mdx}' --no-error-on-unmatched-pattern",
     "format:check": "pnpm biome format --md-formatter-enabled=false . && pnpm oxfmt --check '**/*.{md,mdx}' --no-error-on-unmatched-pattern"
@@ -12,9 +12,9 @@
   "devDependencies": {
     "@biomejs/biome": "latest",
     "htmlhint": "latest",
+    "markdownlint-cli2": "latest",
     "oxfmt": "latest",
     "oxlint": "latest",
-    "prettier": "latest",
     "stylelint": "latest",
     "stylelint-config-standard": "latest"
   },

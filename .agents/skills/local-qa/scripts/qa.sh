@@ -12,6 +12,9 @@ export PNPM_CONFIG_MINIMUM_RELEASE_AGE=$((COOLDOWN_DAYS * 24 * 60))
 pnpm -y install
 pnpm run format
 pnpm run lint:fix
+
+# Markdown
+pnpm exec markdownlint-cli2 --fix '**/*.md' '**/*.mdx'
 pnpm run audit:fix
 
 # GitHub Actions
